@@ -86,7 +86,7 @@ local processfloat = function(float)
       if float.__quarto_custom_node then
         blocks:insert(float.__quarto_custom_node)
       else
-        blocks:insert(float.content)
+        blocks:extend(float.content)
       end
       -- Append apa-note if present
       if float.attributes["apa-note"] then
